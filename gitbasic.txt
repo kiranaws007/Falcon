@@ -1,0 +1,54 @@
+Git: configurations
+git config <followed with>
+followed with:
+
+--global user.name "FirstName LastName"
+--global user.name "yourEmail@email.com"
+--global color.ui true
+--list
+Git: starting a repository
+git init
+git status
+Git: staging files
+adding files to staging area
+
+git add <fileName>
+git add <fileName> <anotherFileName>
+git add .
+git add --all
+git add -A
+removes a file from the staging area
+
+git rm --cached <fileName>
+discard change or reset the file
+
+git reset <fileName>
+Git: committing to a repository
+Appendix:
+
+-m → stands for a message
+
+git commit -m "Add three files"
+
+undo the last Git commit
+
+git reset --soft HEAD^
+Git: pulling and pushing from and to repositories
+Appendix:
+
+-u → add upstream (tracking) reference
+
+git remote add origin <link> //Adding a remote repository
+git push -u origin master //pushes all your branches to the origin.
+git clone <cloneURL> // clone a repository
+git pull // download all the changes 
+Git: branching
+git branch // current branch
+git branch <branchName> // create a branch
+git checkout <branchName> // change current branch
+git merge <branchName> // merge branchName to current branch
+git checkout -b <branchName> // create and checkout a new branch
+Step 3: Storing Credentials
+To avoid entering your credentials every time, you can cache them using the Git credential helper.
+
+git config --global credential.helper cache
